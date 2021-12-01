@@ -1,0 +1,494 @@
+:root {
+    --color-primary: #fec7d7;
+    --color-secundary: #a786df;
+    --font-family: "Nunito";
+    --color-blue: #91c1d7;
+    --color-green: #85d1ce;
+    --color-gray: #535353;
+    --color-tertiary: #d9d4e7;
+    --color-black: #0e172c;
+    --bs-secondary: #0e172c;
+  }
+  
+  .Headline1 {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+  }
+  
+  .Headline2 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  
+  .subtitle1 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+  }
+  
+  .subtitle2 {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.001em;
+  }
+  
+  .body1Regular {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: var(--color-gray);
+  }
+  
+  .body1Bold {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+  }
+  
+  .body2Regular {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
+  }
+  
+  .body2Bold {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
+  }
+  
+  .buttom {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.0125em;
+  }
+  
+  .caption {
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.004em;
+    color: var(--color-gray);
+  }
+  
+  .menu-mascotas {
+    position: fixed;
+    top: 92%;
+    width: 100%;
+  }
+  
+  .icono-activo {
+    width: 122px;
+    height: 40px;
+    top: 36px;
+    left: 24px;
+    margin-top: -7px;
+  }
+  
+  .icono-activo-home,
+  .icono-activo-perfil {
+    width: 102px;
+    height: 40px;
+    top: 36px;
+    left: 24px;
+    margin-top: -7px;
+  }
+  
+  @media (min-width: 540px) {
+    .menu-mascotas {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    .Headline1 {
+      font-size: 34px !important;
+    }
+    .Headline2 {
+      font-size: 28px !important;
+    }
+    .subtitle1 {
+      font-size: 28px !important;
+    }
+    .subtitle2 {
+      font-size: 22px !important;
+    }
+    .body1Regular {
+      font-size: 22px !important;
+    }
+    .body1Bold {
+      font-size: 22px !important;
+    }
+    .body2Regular {
+      font-size: 20px !important;
+    }
+    .body2Bold {
+      font-size: 20px !important;
+    }
+    .buttom {
+      font-size: 24px !important;
+    }
+    .caption {
+      font-size: 21px !important;
+    }
+    .iconos {
+      width: 40px;
+    }
+    .nav-link-mensaje {
+      margin-left: 70%;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  .ocultarmascotas {
+    display: none;
+  }
+  
+  /* CSS DE CARD A LA HORA DE HACER LA ELECCION DE LA MASCOTA */
+  
+  .gradiente {
+    display: flex;
+  }
+  
+  /* IMAGEN Y FLECHA PARA DEVOLVERSE */
+  .card-img-info {
+    position: absolute;
+    width: 400px;
+    height: 522px;
+    left: 0px;
+    top: -23px;
+  
+    background: url(.jpg);
+  }
+  
+  /* .mascotas-info{
+      display: flex;
+      width: 100%;
+      justify-content: center;
+  }  */
+  
+  #Atras {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+    z-index: 1;
+  
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: 20px;
+    top: 105px;
+  
+    /* Black */
+  
+    background: #0e172c;
+    border-radius: 100px;
+  }
+  
+  /* TODA LA HOJA */
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 24px;
+  
+    position: absolute;
+    width: 400px;
+    height: 630px;
+    left: 0px;
+    top: 490px;
+    bottom: 0px;
+  
+    /* White */
+  
+    background: #fffffe;
+    border-radius: 16px 16px 0px 0px;
+  }
+  
+  /* CARD DEBAJO DE LA IMAGEN */
+  
+  #Info1 {
+    /* Auto Layout */
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+  
+    position: static;
+    width: 327px;
+    height: 158px;
+    left: 24px;
+    top: 16px;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 32px 0px;
+  }
+  
+  #btn-fav {
+    position: static;
+    width: 35px;
+    height: 35px;
+    left: 279px;
+    top: 0px;
+  
+    filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.25));
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    border: 0;
+    border-radius: 50px;
+    flex-grow: 0;
+    margin: 0px 16px;
+  
+    background: #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #Corazon_NoFav {
+    position: absolute;
+    left: 22.69%;
+    right: 5.41%;
+    top: 30.94%;
+    bottom: 29.69%;
+  
+    /* Tertiary */
+  
+    background: #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Parte de nombre, raza y el icono de raza */
+  #Info2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    color: #0e172c;
+  
+    position: static;
+    width: 327px;
+    height: 48px;
+    left: 0px;
+    top: 0px;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 24px 0px;
+  }
+  
+  #raza-edad {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+  
+    position: static;
+    width: 327px;
+    height: 24px;
+    left: 0px;
+    top: 72px;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 24px 0px;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 25px 0px 10px;
+  }
+  
+  #raza,
+  #edad {
+    position: static;
+    width: 32px;
+    height: 32px;
+    left: 77px;
+    top: 0.5px;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
+  }
+  
+  /* SECCION DE PERSONALIDAD, ICONOS, ETC */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* SECCION DE UBICACION Y SUS DERIVADOS */
+  .UBI {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+  
+    position: static;
+    width: 327px;
+    height: 38px;
+    left: 0px;
+    top: 120px;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 24px 0px;
+  }
+  
+  #Ubicacion {
+    position: static;
+    width: 24px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 1px 19px;
+  }
+  
+  #ubi {
+    position: static;
+    width: 295px;
+    height: 38px;
+    left: 32px;
+    top: 0px;
+  
+    /* Body 2/Regular */
+  
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
+  
+    /* Grey */
+  
+    color: #535353;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+    margin: 0px 0px;
+  }
+  
+  .data_historia {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+  
+    position: static;
+    width: 327px;
+    height: 177px;
+    left: 24px;
+    top: 363px;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin: 32px 0px;
+  }
+  
+  .history {
+    position: static;
+    width: 327px;
+    height: 25px;
+    left: 0px;
+    top: 0px;
+  
+    /* Headline/Headline 2 */
+  
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+  
+    /* Black */
+  
+    color: #0e172c;
+  }
+  
+  .history2 {
+    position: static;
+    width: 327px;
+    height: 144px;
+    left: 0px;
+    top: 33px;
+  
+    /* Body 1/Regular */
+  
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+  
+    letter-spacing: 0.005em;
+  
+    /* Grey */
+  
+    color: #535353;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 8px 0px;
+  }
+  
